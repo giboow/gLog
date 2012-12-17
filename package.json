@@ -1,13 +1,16 @@
 {
-  "name": "application-name",
+  "name": "gLog",
   "version": "0.0.1",
   "private": true,
   "scripts": {
     "start": "node app"
   },
   "dependencies": {
-    "express": "3.0.1",
+    "express": "*",
     "ejs": "*",
-    "stylus": "*"
+    "stylus": "*",
+    "socket.io" : "*",
+    "socket.io-client" : "*",
+    "path" : "*"
   }
 }
