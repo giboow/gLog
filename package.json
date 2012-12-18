@@ -11,6 +11,7 @@
     "stylus": "*",
     "socket.io" : "*",
     "socket.io-client" : "*",
-    "path" : "*"
+    "path" : "*",
+    "walk" : "*"
   }
 }
