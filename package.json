@@ -8,6 +8,7 @@
   "dependencies": {
     "express": "*",
     "ejs": "*",
+    "express-ejs-layouts" : "*",
     "stylus": "*",
     "socket.io" : "*",
     "socket.io-client" : "*",

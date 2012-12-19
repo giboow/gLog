@@ -6,4 +6,5 @@ module.exports = function(app) {
 	app.get('/', routes.index);
 	app.get('/log', log.index);
 	app.get('/log/list', log.list);
+	app.get('/log/get', log.get);
 }
