@@ -2,14 +2,15 @@ var path = require('path');
 var fs = require('fs');
 var filename = path.resolve(process.argv[2]);
 var log = process.argv[3];
-
 fs.lstat(filename, function(err, stats){
-	if (stats.isFile()) {
-		fileProcess(filename);
-	} else if (stats.isDirectory()) {
-		dirProcess(filename);
+	if(!err) {
+		if (stats.isFile()) {
+			fileProcess(filename);
+		} else if (stats.isDirectory()) {
+			dirProcess(filename);
+		}
 	} else {
-		throw filename +": Doesn't exist..";
+		throw filename + " : Fichier ou dossier inexistant";
 	}
 });
 
