@@ -3,8 +3,9 @@ var config = {}
 
 
 config.logs = {};
+config.logs.log = "./log";
+config.logs.test = "./log.test";
 config.logs.out = "./log.out";
-config.logs.test = "./test.log";
 
 
 module.exports = config;

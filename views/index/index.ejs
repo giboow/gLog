@@ -1,9 +1,12 @@
 <script type="text/javascript" src="http://localhost:3001/socket.io/socket.io.js"></script>
 <script type="text/javascript">
 	var socket = io.connect('http://localhost:3001');
-  	socket.on('news', function (data) {
-  	console.log(data);
-    	$("#logflow").append("<div class=\"log\"><div class=\"title\">"+data.filename+" ("+data.hostname+") : "+"</div><div class=\"data\">"+data.data+"<div></div>");
+  	socket.on('newLog', function (data) {
+    	$("#logflow").prepend(
+    		"<div class=\"log\"><div class=\"title\">"
+    			+data.filename+" ("+data.hostname+") : "
+			+"</div><div class=\"data\">"+data.data+"<div></div>"
+		);
   	});
 </script>
 
