@@ -1,14 +1,12 @@
-gLog
-===========
 Log Tracker
 
 Requirements
 Nodejs and npm installed, refer to http://nodejs.org/
 
 Setup
-#git@github.com:giboow/gLog.git
-#cd gLog
-#npm install
+# git@github.com:giboow/gLog.git
+# cd gLog
+# npm install
 
 Update config file to track log files or directories
 File exemple :
@@ -18,9 +16,9 @@ config.logs.test = "./log.test";
 config.logs.out = "./log.out";
 
 Running
-#node app
+# node app
 or
-#npm start
+# npm start
 
 Access http://localhost:3000
 
