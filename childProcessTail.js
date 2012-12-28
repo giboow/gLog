@@ -1,18 +1,32 @@
 var path = require('path');
-var fs = require('fs');
 var filename = path.resolve(process.argv[2]);
 var log = process.argv[3];
-fs.lstat(filename, function(err, stats){
-	if(!err) {
-		if (stats.isFile()) {
-			fileProcess(filename);
-		} else if (stats.isDirectory()) {
-			dirProcess(filename);
+
+watchLog(filename);
+
+
+function watchLog(filename) {
+	var fs = require('fs');
+	fs.lstat(filename, function(err, stats){
+		if(!err) {
+			if (stats.isFile()) {
+				fileProcess(filename);
+			} else if (stats.isDirectory()) {
+				dirProcess(filename);
+			}
+		} else {
+			var tid = setInterval(function(){
+				fs.lstat(filename, function(err, stats){
+					if(!err) {
+						clearTimeout(tid);
+						watchLog(filename);
+					}
+				});
+			}, 5000);
 		}
-	} else {
-		throw filename + " : Fichier ou dossier inexistant";
-	}
-});
+	});
+}
+
 
 
 /**
