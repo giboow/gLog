@@ -3,11 +3,23 @@
 	<head>
 		<title>gLog</title>
 		<meta charset="UTF-8">
+		<link rel='stylesheet' href='/css/clear.css' />
 		<link rel='stylesheet' href='/css/style.css' />
 		<script type="text/javascript" src="/js/jquery-1.8.3.min.js"></script>
 		<%- script %>
 	</head>
 	<body>
+		<header class="topHeader">
+			<div class="title">gLog</div>
+			<navigation class="menu">
+				<ul>
+					<li><a href="">Events</a></li>
+					<li><a href="">Admin</a></li>
+				</ul>
+			</navigation>
+			<navigation class="account">
+			</navigation>
+		</header>
 		<%- body %>
 	</body>
 </html>
